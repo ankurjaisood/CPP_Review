@@ -48,8 +48,8 @@ BinaryTreeNode* createBinarySearchTree(int length, int range) {
 	// Creates a symmetrical BST
 	srand(time(NULL));
 	BinaryTreeNode* head = new BinaryTreeNode();
-	BinaryTreeNode* prevLeft;
-	BinaryTreeNode* prevRight;
+	BinaryTreeNode* prevLeft = nullptr;
+	BinaryTreeNode* prevRight = nullptr;
 
 	for (int i = 0; i <= length; i++) {
 		if (i == 0) {
@@ -106,11 +106,15 @@ BinaryTreeNode* lookupValueRecursively(BinaryTreeNode* node, int value) {
 	if (!node) {
 		return nullptr;
 	}
+
+	if (node->getValue() == value) {
+		return node;
+	}
 	else if (node->getValue() > value) {
-		lookupValueRecursively(node->getRight(), value);
+		return lookupValueRecursively(node->getRight(), value);
 	}
 	else if (node->getValue() < value) {
-		lookupValueRecursively(node->getLeft(), value);
+		return lookupValueRecursively(node->getLeft(), value);
 	}
 	else {
 		return nullptr;
