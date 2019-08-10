@@ -4,10 +4,11 @@
 #include <iostream>
 #include <stdlib.h>
 #include "LinkedList.h"
+#include "BinaryTrees.h"
 
 using namespace std;
 
-void LinkedListTest() {
+void LinkedListDemo() {
 	const int length = 5;
 	NodeElement* head = createList(length);
 
@@ -43,7 +44,7 @@ void LinkedListTest() {
 
 int main()
 {
-	//LinkedListTest();
+	LinkedListDemo();
 
 	return 0;
 }

@@ -52,18 +52,16 @@ void traverseNodes(NodeElement* head) {
 	}
 }
 
-int findValue(NodeElement* head, int value) {
+NodeElement* findValue(NodeElement* head, int value) {
 	NodeElement* curr = head;
-	int i = 0;
 
 	while (curr) {
 		if (curr->getData() == value) {
-			return i;
+			return curr;
 		}
 		curr = curr->getNext();
-		i++;
 	}
-	return -1;
+	return nullptr;
 }
 
 bool insertElement(NodeElement** head, NodeElement* elem, int index) {
