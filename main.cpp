@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "BinaryTrees.h"
+#include "STL_demo.h"
 
 using namespace std;
 
@@ -44,7 +45,11 @@ void LinkedListDemo() {
 
 int main()
 {
-	LinkedListDemo();
+	// Linked Lists
+	//LinkedListDemo();
+
+	// C++ STL 
+	vectorDemo();
 
 	return 0;
 }
